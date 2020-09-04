@@ -1,6 +1,6 @@
 # ERC PUMII Docker Image
 
-This repository contains an example Dockerfile that can be used to build a docker image that will be run on Leo Rover. The ERC repo: https://github.com/fictionlab/erc_docker_img was taken as a template.
+This repository contains an our Dockerfile that can be used to build a docker image that will be run on Leo Rover. The ERC repo: https://github.com/fictionlab/erc_docker_img was taken as a template.
 It can be used by the teams as a template for developing their custom software for the ERC competitions.
 
 This example image starts the Freedom agent which connects to your account at [Freedom Robotics App](https://app.freedomrobotics.ai/), as well as a launch file from an example package which start a ROS node that let's you save images from topics to PNG files.
