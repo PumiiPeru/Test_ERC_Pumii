@@ -9,7 +9,7 @@ This example image starts the Freedom agent which connects to your account at [F
 
 Login to the [Freedom Robotics App](https://app.freedomrobotics.ai/), click on **Add Device** -> **Quick Create** and copy the URL address from the command (not the whole command).
 
-Now execute the following command as the `root` user (replace `<YOUR_URL>` with the address you copied):
+Now execute the following command as the `root` user (replace `<YOUR_URL>` with the address you copied). Our image was built with our personal token in FR.
 ```
 docker build -t erc_img --build-arg FREEDOM_URL="<YOUR_URL>" .
 ```
@@ -22,4 +22,9 @@ docker run -it --net=host --name erc_img erc_img
 If you want to use it with ROS running on another machine, pass the `ROS_IP` and `ROS_MASTER_URI` variables:
 ```
 docker run -it --net=host -e ROS_IP=<YOUR_IP> -e ROS_MASTER_URI=<MASTER_URI> --name erc_img erc_img
+```
+For running in the Leo Rover try considering
+```
+docker run --net=host -e ROS_IP= "10.0.0.3" -e
+ROS_MASTER_URI= "http://10.0.0.2:11311" --name erc_img erc_img
 ```
